@@ -1,0 +1,45 @@
+<!ELEMENT teiHeader (#PCDATA | fileDesc)*>
+<!ELEMENT docTitle (#PCDATA | titlePart)*>
+<!ELEMENT trigger (#PCDATA)>
+<!ATTLIST trigger type CDATA #IMPLIED>
+<!ATTLIST trigger ana CDATA #IMPLIED>
+<!ATTLIST trigger form CDATA #IMPLIED>
+<!ATTLIST trigger lemma CDATA #IMPLIED>
+<!ATTLIST trigger from CDATA #IMPLIED>
+<!ATTLIST trigger to CDATA #IMPLIED>
+<!ELEMENT fileDesc (#PCDATA | titleStmt | publicationStmt | sourceDesc)*>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT body (#PCDATA | head | div)*>
+<!ELEMENT biblFull (#PCDATA | titleStmt | publicationStmt)*>
+<!ELEMENT head (#PCDATA)>
+<!ATTLIST head type CDATA #IMPLIED>
+<!ATTLIST head interp CDATA #IMPLIED>
+<!ELEMENT div (#PCDATA | head | s | p)*>
+<!ATTLIST div n CDATA #IMPLIED>
+<!ELEMENT p (#PCDATA | s)*>
+<!ATTLIST p ana CDATA #IMPLIED>
+<!ELEMENT titleStmt (#PCDATA | title)*>
+<!ELEMENT pb (#PCDATA)>
+<!ATTLIST pb n CDATA #IMPLIED>
+<!ELEMENT s (#PCDATA | s | w | pb | trigger)*>
+<!ATTLIST s n CDATA #IMPLIED>
+<!ATTLIST s ana CDATA #IMPLIED>
+<!ELEMENT sourceDesc (#PCDATA | biblFull)*>
+<!ELEMENT authority (#PCDATA)>
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w xml:id CDATA #IMPLIED>
+<!ATTLIST w n CDATA #IMPLIED>
+<!ATTLIST w lemma CDATA #IMPLIED>
+<!ATTLIST w pos CDATA #IMPLIED>
+<!ELEMENT TEI (#PCDATA | teiHeader | text)*>
+<!ATTLIST TEI xmlns CDATA #IMPLIED>
+<!ELEMENT publicationStmt (#PCDATA | authority)*>
+<!ELEMENT titlePart (#PCDATA)>
+<!ATTLIST titlePart type CDATA #IMPLIED>
+<!ELEMENT text (#PCDATA | group | front | body)*>
+<!ATTLIST text solution CDATA #IMPLIED>
+<!ATTLIST text type CDATA #IMPLIED>
+<!ATTLIST text fileName CDATA #IMPLIED>
+<!ELEMENT front (#PCDATA | pb | docTitle)*>
+<!ELEMENT group (#PCDATA | text)*>
+<!ATTLIST group chambre CDATA #IMPLIED>
